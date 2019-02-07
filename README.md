@@ -1,7 +1,7 @@
 # PicoFramework/TreeProducer
 It reads centrally-produced NanoAOD and saves the information you need in your analysis-tree.
 The master branch contains a very simple example of analysis selecting 2 muons. 
-Hints are provided for exending it to the case of an analysis interested in multi-channels (e.g. ee,mumu or tautau->tauhtauh, mutauh, eletauh, elemu)
+Hints are provided for exending it to the case of an analysis interested in multi-channels (e.g. ee,mumu or tautau->tauhtauh, mutauh, eletauh, elemu).
 
 ## Installation
 Install `CMSSW`
