@@ -52,18 +52,20 @@ You also implement the functions useful for your analysis.
 
 ### Locally
 In PicoFramework/TreeProducer/python
+
+**Note** that you need `p = PostProcessor(outputDir=".",inputFiles=infiles,modules=[module2run()],noOut=True)` in analyzer.py. This can be automatized.
 ```
 python analyzer.py
 ```
-Remember that you need `p = PostProcessor(outputDir=".",inputFiles=infiles,modules=[module2run()],noOut=True)` in analyzer.py. This can be automatized.
-
 
 ### Crab
 In PicoFramework/TreeProducer/crab
+
+**Note** that you need `p = PostProcessor(outputDir=".",inputFiles=inputFiles(),modules=[module2run()],noOut=True,fwkJobReport=True)` in analyzer.py. This can be automatized.
 ```
 python multicrab.py
 ```
-Remember that you need `p = PostProcessor(outputDir=".",inputFiles=inputFiles(),modules=[module2run()],noOut=True,fwkJobReport=True)` in analyzer.py. This can be automatized.
+
 
 ## Notes
 
