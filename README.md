@@ -19,7 +19,7 @@ git clone https://github.com/cms-nanoAOD/nanoAOD-tools.git PhysicsTools/NanoAODT
 
 Install the framework `PicoFramework/TreeProducer`
 ```
-git clone 
+git clone https://github.com/romeof/PicoFramework/TreeProducer 
 ```
 
 Make `PhysicsTools/NanoAODTools` compatible with `PicoFramework/TreeProducer`
