@@ -1,0 +1,21 @@
+#Find dataset 
+dasgoclient --query="dataset=/ZprimeToTauTau*/*/MINIAODSIM | grep dataset.name"
+
+#Find file/site of a dataset
+dasgoclient --query="file dataset=/TTbarH_M-125_13TeV_amcatnlo-pythia8-tauola/Phys14DR-PU20bx25_tsg_PHYS14_25_V1-v2/MINIAODSIM"
+dasgoclient --query="site dataset=/GluGluToHToTauTau_M-125_13TeV-powheg-pythia6/Phys14DR-PU20bx25_tsg_PHYS14_25_V1-v1/AODSIM"
+
+#Find number of events of a given dataset
+dasgoclient --query="file dataset=/TTbarH_M-125_13TeV_amcatnlo-pythia8-tauola/Phys14DR-PU20bx25_tsg_PHYS14_25_V1-v2/MINIAODSIM | sum(file.nevents)"
+
+#Find for a given dataset the files of a given Run:Lumi
+dasgoclient --query="file dataset=/HT/Run2011B-v1/RAW run=176304 lumi=80"
+
+#Find lumi for a given file
+dasgoclient --query="lumi file=/store/data/Run2011B/SingleElectron/RECO/PromptReco-v1/000/175/832/105D5EB3-A4DB-E011-BD6B-BCAEC5329716.root"
+
+#Find latest 10 files from Express Reco
+dasgoclient --query="file dataset=/MuOnia/Run2011B-PromptReco-v1/AOD | grep file.name, file.creation_time | sort `echo file.creation_time | awk -F ',' '{print $1}' | sed -e 's/\[u//'`" --limit=0  | tail -n 10
+
+#Find datasets containing events from run number 108741
+dasgoclient --query="dataset run=108741 | grep dataset.name" --limit=0
