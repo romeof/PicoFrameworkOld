@@ -55,7 +55,7 @@ class ProducerMuMu(Module):
         
  def beginFile(self, inputFile, outputFile, inputTree, wrappedOutputTree):
   print "Here is beginFile"
-  self.evtcount  = 0
+  self.evtcount = 0
   self.out = declareVariables(inputFile) 
   #pass
         
