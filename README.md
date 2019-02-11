@@ -45,8 +45,7 @@ Here you implement the code on how to process the events (e.g. dimuon selection)
 Here you specify the quantities you want to save.
 
 **TreeProducerCommon.py**
-Here you specify the quantities you want to save, if they have an event basis (e.g. run, luminosityBlock info, or dilepton mass for a multi-channel dilepton analysis).
-You also implement the functions useful for your analysis.
+Here you implement the functions useful for your analysis.
 
 ## Run
 
