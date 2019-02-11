@@ -17,7 +17,6 @@ class ProducerMuMu(Module):
   self.isData    = kwargs.get('dataType')=='data'
   self.year      = kwargs.get('year') 
   #
-  self.evtcount  = 0
   self.maxNumEvt = kwargs.get('maxNumEvt')
   self.prescaleEvt = kwargs.get('prescaleEvt')
   #Analysis quantities
@@ -56,6 +55,7 @@ class ProducerMuMu(Module):
         
  def beginFile(self, inputFile, outputFile, inputTree, wrappedOutputTree):
   print "Here is beginFile"
+  self.evtcount  = 0
   self.out = declareVariables(inputFile) 
   #pass
         

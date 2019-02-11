@@ -6,7 +6,7 @@ import numpy as num
 class TreeProducerCommon(object):
  def __init__(self, name):
 
-  #Create file (Do not change this paragraph!)
+  #Create file 
   inputFile = name
   outputFileName = os.path.basename(str(inputFile)).split(".root", 1)[0]+"_Skim.root"
   compression = "LZMA:9"
@@ -19,7 +19,7 @@ class TreeProducerCommon(object):
   self.outputfile = ROOT.TFile(outputFileName, 'RECREATE',"",compressionLevel)
   self.outputfile.SetCompressionAlgorithm(compressionAlgo)
   
-  #Meta data (Do not change this paragraph!)
+  #Meta data 
   self._otherTrees = {}
   self._otherObjects = {}
   for k in inputFile.GetListOfKeys():
@@ -39,18 +39,15 @@ class TreeProducerCommon(object):
   for on,ov in self._otherObjects.iteritems():
    self.outputfile.WriteTObject(ov,on)
 
-  #All entries (Do not change this paragraph!)
+  #All entries 
   self.evtree = ROOT.TTree('evtree','evtree')
   self.add_branch("numparsedevt")
         
-  #Common variables (Do not change this paragraph!)
+  #Common variables 
   self.Events = ROOT.TTree('Events','Events')
   self.add_branch("run")
   self.add_branch("luminosityBlock")
   self.add_branch("event")
-
-  #Event variables. Add your variables here. 
-  self.add_branch("mu0mu1_mass")
 
   #Histogram for cutflow
   #self.cutflow = ROOT.TH1F('cutflow', 'cutflow',  25, 0,  25)

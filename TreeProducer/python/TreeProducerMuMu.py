@@ -13,3 +13,6 @@ class TreeProducerMuMu(TreeProducerCommon):
   self.add_branch("mu0_eta")
   self.add_branch("mu1_pt")
   self.add_branch("mu1_eta")
+
+  #Event variables
+  self.add_branch("mu0mu1_mass")
